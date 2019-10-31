@@ -103,7 +103,8 @@ FROM users
 WHERE userid = 'brown';
 
 
-
-
-
+--usernm이 샐리인 데이터를 조회하는 쿼리를 작성
+SELECT *
+FROM users
+WHERE usernm = '샐리';
 
