@@ -232,6 +232,12 @@ WHERE job = 'SALESMAN'
    OR empno LIKE('78%');
   
 
+--[½Ç½À 13]
+SELECT *
+FROM emp
+WHERE job = 'SALESMAN'
+  OR empno >= 7800
+  AND empno < 7900;
 
 
 
