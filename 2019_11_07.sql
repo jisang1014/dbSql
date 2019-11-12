@@ -103,7 +103,6 @@ WHERE member.mem_id = cart.cart_member
   AND cart_prod = prod.prod_id;
 
 
-
 --데이터 결합 [실습 4] =============================================================
 SELECT*
 FROM customer;  --cid cnm(이름)
@@ -131,11 +130,6 @@ WHERE cnm IN('brown', 'sally');
 SELECT customer.cid, customer.cnm, product.pid, product.pnm, sum(cnt) AS cnt
 FROM (customer JOIN cycle ON(customer.cid = cycle.cid)) JOIN product ON(cycle.pid = product.pid)
 GROUP BY customer.cid, customer.cnm, product.pid, product.pnm;
-
-GROUP BY cid, pid
-
-SELECT *
-FROM cycle;
 
 
 --데이터 결합 [실습 7] =============================================================
