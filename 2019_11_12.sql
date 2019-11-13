@@ -189,6 +189,6 @@ CREATE TABLE dept_test(
 );
 
 INSERT INTO dept_test VALUES (1, 'ddit', 'daejeon');
-INSERT INTO dept_test VALUES (2,  'ddit', 'daejeon');
+INSERT INTO dept_test VALUES (2, 'ddit', 'daejeon');
 ROLLBACK;
 
