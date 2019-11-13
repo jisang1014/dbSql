@@ -335,10 +335,13 @@ ALTER TABLE emp_test MODIFY (ename NOT NULL);
 ALTER TABLE emp_test MODIFY (ename NULL);
 
 
-ALTER TABLE emp_test ADD CONSTRAINT emp_test_ename_notNull CHECK (ename IS NOT NULL);
+ALTER TABLE emp_test ADD CONSTRAINT emp_test_ename_notNull CHECK (ENAME IS NOT NULL);
 ALTER TABLE emp_test DROP CONSTRAINT emp_test_ename_notNull;
 
 INSERT INTO emp_test VALUES (9999, null, 10);
+
+
+
 
 
 
