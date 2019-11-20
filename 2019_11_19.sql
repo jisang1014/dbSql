@@ -182,6 +182,14 @@ FROM emp
 GROUP BY grouping sets (deptno, job);
 
 
-SELECT deptno, job sum(sal)
+SELECT deptno, job, sum(sal)
 FROM emp
-GROUP BY GROUPING SETS (deptno job);
+GROUP BY GROUPING SETS (deptno, job);
+
+
+
+
+
+
+
+
