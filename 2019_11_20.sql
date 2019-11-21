@@ -21,6 +21,7 @@ FROM emp
 GROUP BY ROLLUP(job, deptno);
 
 
+
 SELECT CASE WHEN GROUPING(job) = 1 AND GROUPING(deptno) = 1 THEN '[ÃÑ°è] ----'
             ELSE job
         END job, 
