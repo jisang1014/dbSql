@@ -67,9 +67,12 @@ WHERE  a.cnt >= b.rn
 ORDER BY a.deptno, b.rn ) b ) b
 WHERE a.j_rn = b.j_rn;
 
+-- =========================================================
+SELECT ename, sal, deptno, RANK() OVER (PARTITION BY deptno ORDER BY sal DESC) rank
+FROM emp;
 
-
-
+SELECT ename, sal, deptno, ROW_NUMBER() OVER (PARTITION BY deptno ORDER BY sal DESC) rank
+FROM emp;
 
 
 
