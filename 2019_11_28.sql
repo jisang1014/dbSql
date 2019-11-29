@@ -215,24 +215,24 @@ BEGIN
         dbms_output.put_Line(rec.deptno || ', ' ||rec.dname);
     END LOOP;
 END;
-
+/
 
 -- 파라미터가 있는 명시적 커서
 DECLARE
-    CURSOR emp_cursor(p_jab emp.job%TYPE) IS
+    CURSOR emp_cursor(p_job emp.job%TYPE) IS
         SELECT empno, ename, job
-        FROM emp
+        FROM emp 
         WHERE job = p_job;
 BEGIN
     FOR emp IN emp_cursor('SALESMAN') LOOP
         dbms_output.put_Line(emp.empno || ', ' || emp.ename || ', ' ||  emp.job);
     END LOOP;
 END;
+/
 
 
 
-
-
+   
 
 
 

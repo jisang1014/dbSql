@@ -149,6 +149,18 @@ SELECT *
 FROM dept_test;
 
 
+CREATE OR REPLACE PROCEDURE registdept_test (p_deptno IN dept.deptno%TYPE, p_dname IN dept.dname%TYPE, p_loc IN dept.loc%TYPE)
+IS
+    var_deptno dept.deptno%TYPE := p_deptno;
+    var_dname dept.dname%TYPE := p_dname;
+    var_loc dept.loc%TYPE := p_loc;
+BEGIN
+    INSERT INTO dept_test
+    VALUES (p_deptno, p_dname, p_loc);
+    COMMIT;
+END;
+/
 
+EXEC registdept_test(98, 'ddit', 'daejeon');
 
 
